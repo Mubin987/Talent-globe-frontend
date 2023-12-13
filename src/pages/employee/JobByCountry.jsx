@@ -12,10 +12,10 @@ function JobByCountry() {
   const [listofJobs,setlistofJobs] = useState([]);
   const [countries, setCountries] = useState([]);
   useEffect(()=>{
-    axios.get(`http://localhost:3001/jobs/byCountry/${countryId}`).then((response)=>{  
+    axios.get(`https://talent-globe-api-mubin.up.railway.app/jobs/byCountry/${countryId}`).then((response)=>{  
       setlistofJobs(response.data);    //access data inside response
     });
-    axios.get("http://localhost:3001/countries").then((response) => {
+    axios.get("https://talent-globe-api-mubin.up.railway.app/countries").then((response) => {
       setCountries(response.data);
     });
   },[countryId]);

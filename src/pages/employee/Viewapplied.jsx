@@ -5,7 +5,7 @@ import DateRangeIcon from '@mui/icons-material/DateRange';
 function Viewapplied() {
     const [appliedJobs,setAppliedJobs] = useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:3001/applications/myapplications',{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{  
+        axios.get('https://talent-globe-api-mubin.up.railway.app/applications/myapplications',{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{  
             if(response.data.error){
                 alert(response.data.error);
             }else{

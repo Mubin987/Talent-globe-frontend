@@ -5,7 +5,7 @@ import axios from 'axios';
 const Table = ({ array }) => {
     const Approve = (applicationid) => {
         const data = {application_id:applicationid};
-        axios.post("http://localhost:3001/applications/approve", data, {headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response) => {
+        axios.post("https://talent-globe-api-mubin.up.railway.app/applications/approve", data, {headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response) => {
             if (response.data.error) {
               alert(response.data.error);
             }else{

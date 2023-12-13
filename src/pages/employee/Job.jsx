@@ -9,14 +9,14 @@ function Job() {
     const [job,setJob] = useState([]);
 
     useEffect(()=>{
-        axios.get(`http://localhost:3001/jobs/${id}`).then((response)=>{  
+        axios.get(`https://talent-globe-api-mubin.up.railway.app/jobs/${id}`).then((response)=>{  
             setJob(response.data);    //access data inside response
         });
     },[]);
 
     const apply = () => {
       const data = { status: 'pending', job_Id: id };
-      axios.post("http://localhost:3001/applications", data, {headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response) => {
+      axios.post("https://talent-globe-api-mubin.up.railway.app/applications", data, {headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response) => {
         if (response.data.error) {
           alert(response.data.error);
         } else {

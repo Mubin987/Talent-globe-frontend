@@ -20,7 +20,7 @@ function CreatePost() {
         description: Yup.string().required(),
     });
     const onSubmit = (data) =>{
-        axios.post("http://localhost:3001/jobs",data,{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{ 
+        axios.post("https://talent-globe-api-mubin.up.railway.app/jobs",data,{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{ 
             if(response.data.error){
                 alert(response.data.error);
             }else{

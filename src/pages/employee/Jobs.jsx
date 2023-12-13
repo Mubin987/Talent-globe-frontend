@@ -12,7 +12,7 @@ function Jobs() {
   // const [companyName,setcompanyName] = useState('');
   // const [id,setid] = useState('');
   useEffect(()=>{
-    axios.get("http://localhost:3001/jobs").then((response)=>{  
+    axios.get("https://talent-globe-api-mubin.up.railway.app/jobs").then((response)=>{  
       setlistofJobs(response.data);    //access data inside response
     });
   },[]);
@@ -22,7 +22,7 @@ function Jobs() {
   };
   // const fetchCompanyName = async (companyId) => {
   //   try {
-  //     const response = await axios.get(`http://localhost:3001/companies/${companyId}`);
+  //     const response = await axios.get(`https://talent-globe-api-mubin.up.railway.app/companies/${companyId}`);
   //     console.log(response.data);
   //     return response.data;
   //   } catch (error) {

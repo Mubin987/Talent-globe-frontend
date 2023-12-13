@@ -37,7 +37,7 @@ function Esignup() {
         ).required('password is required')
     });
     const onSubmit = (data) =>{
-        axios.post("http://localhost:3001/auth/signup/employee",data).then((response)=>{ 
+        axios.post("https://talent-globe-api-mubin.up.railway.app/auth/signup/employee",data).then((response)=>{ 
             console.log(response.data);
             if(response.data.message==="Signup Success"){
                 setAlertmsg(response.data.message);

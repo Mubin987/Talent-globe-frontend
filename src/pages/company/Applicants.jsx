@@ -7,7 +7,7 @@ function Applicants() {
     const { id } = useParams();
     const [listofApplicants,setlistofApplicants] = useState([]);
     useEffect(()=>{
-        axios.get(`http://localhost:3001/applications/byJobid/${id}`,{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{  
+        axios.get(`https://talent-globe-api-mubin.up.railway.app/applications/byJobid/${id}`,{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{  
           if(response.data.error){
             alert(response.data.error);
         }else{

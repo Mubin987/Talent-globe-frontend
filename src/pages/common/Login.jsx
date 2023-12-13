@@ -28,7 +28,7 @@ function Login() {
         
     });
     const onSubmit = (data) =>{
-        axios.post("http://localhost:3001/auth/login",data).then((response)=>{  
+        axios.post("https://talent-globe-api-mubin.up.railway.app/auth/login",data).then((response)=>{  
             console.log(response.data);
             if(response.data.message==="LOGIN SUCCESSFUL"){
                 setAlertmsg(response.data.message);

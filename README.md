@@ -1,3 +1,17 @@
-# Talent-globe-frontend
-A job portal for Global opportunities
-# Talent-globe-frontend
+# Job portal
+- Client repository named talent-globe-frontend. A job portal web app to search and apply for Global job opportunities as job-seeker and post job and approve applicants as a Company.
+
+# Technologies Used
+
+- React v18.2.0
+- React Router v6
+- Axios
+- JavaScript
+- HTML & CSS
+- MaterialUI (MUI)
+- Formik & Yup
+
+# Deployment
+
+- Link : 
+- Backend repo Link : 

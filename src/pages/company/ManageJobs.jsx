@@ -8,7 +8,7 @@ function ManageJobs() {
   const [listofJobs,setlistofJobs] = useState([]);
   const navigate = useNavigate();
   useEffect(()=>{
-    axios.get("http://localhost:3001/jobs/by/company",{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{  
+    axios.get("https://talent-globe-api-mubin.up.railway.app/jobs/by/company",{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{  
       if(response.data.error === "User not logged in"){
         alert(response.data.error);
     }else{
@@ -32,7 +32,7 @@ function ManageJobs() {
   };  
   const deleteJob = (jobId) => {
     const data = {jobId:jobId};
-    axios.post("http://localhost:3001/jobs/delete", data, {headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response) => {
+    axios.post("https://talent-globe-api-mubin.up.railway.app/jobs/delete", data, {headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response) => {
         if (response.data.error) {
           alert(response.data.error);
         }else{

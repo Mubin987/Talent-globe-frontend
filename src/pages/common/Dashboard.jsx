@@ -6,7 +6,7 @@ function Dashboard() {
     const [usertype,setUsertype] = useState('');
     useEffect(()=>{
         const data = {};
-        axios.post("http://localhost:3001/auth/dashboard",data,{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{ 
+        axios.post("https://talent-globe-api-mubin.up.railway.app/auth/dashboard",data,{headers:{accessToken:sessionStorage.getItem("accessToken"),},}).then((response)=>{ 
             if(response.data.error === "User not logged in"){
                 alert(response.data.error);
             }else{
