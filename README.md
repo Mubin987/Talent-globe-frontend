@@ -13,5 +13,5 @@
 
 # Deployment
 
-- Link : 
-- Backend repo Link : 
+- Link : https://talent-globe.netlify.app/
+- Backend repo Link : https://github.com/Mubin987/talent-globe-backend

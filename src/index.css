@@ -65,7 +65,8 @@ button:focus-visible {
 }
 #root {
   max-width: 1580px;
-  margin: 40px auto 90px;
+  display: flex;
+  align-items: center;
   padding: 0px;
   text-align: center;
 }
