@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 4vh auto 8vh;
+  margin: 4vh auto 8vh auto;
 }
 
 #root {
