@@ -7,8 +7,11 @@ function Home() {
   sessionStorage.clear();
   return (
     <div>
-      <Typography variant="h2" component="div" align="center" color="textPrimary" sx={{ marginBottom: 6 }}>
+      <Typography variant="h2" component="div" align="center" color="textPrimary" sx={{ marginBottom: 2 }}>
         Talent Globe
+      </Typography>
+      <Typography variant="h5" component="div" align="center" color="textPrimary" sx={{ marginBottom: 6 }}>
+        Discover without Boundaries...
       </Typography>
       <Button variant="contained" sx={{ marginRight: 2 }}><Link to='/login' >Login</Link> </Button>
       <Button variant="contained"><Link to='/signup'>Signup</Link> </Button>
