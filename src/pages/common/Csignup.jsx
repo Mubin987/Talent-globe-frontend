@@ -5,7 +5,8 @@ import axios from 'axios';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { useNavigate } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
+import logo from '../../logo.png';
+import { useMediaQuery  } from '@mui/material'
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -16,6 +17,8 @@ function Csignup() {
     const [open, setOpen] = useState(false);
     const [alertmsg, setAlertmsg] = useState('');
     const [severity, setSeverity] = useState('');
+    const isExtraSmallScreen = useMediaQuery('(max-width: 600px)');
+    const logoSize = isExtraSmallScreen ? '80vw' : '40vw';
     const initialValues = {
         name:'',
         username:'',
@@ -65,9 +68,7 @@ function Csignup() {
     };
   return (
     <div className='Signup'>
-        <Typography variant="h2" component="div" align="center" color="textPrimary" sx={{ marginBottom: 6 }}>
-        Talent Globe
-        </Typography>
+        <img src={logo} alt="Logo" style={{ width: logoSize}}/><br/><br/>
         <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
             <Form className='formContainer'>
              <label htmlFor='name'>Name: 

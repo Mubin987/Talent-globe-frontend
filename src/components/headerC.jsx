@@ -74,19 +74,19 @@ function HeaderC(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-      <Link to='/cDashboard' style={{ color: 'black'}}>Talent Globe</Link>
+      <Typography variant="h5" sx={{ my: 2 }}>
+      <Link to='/cDashboard' style={{ color: '#0080ff'}}>Talent Globe</Link>
       </Typography>
       <Divider />
       <List>
         {navItems.map((item,index) => (
-          <Link key={item.id} to={links[index]}>
-          <ListItem disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+          
+          
+          <Typography variant="h6" sx={{ my: 2 }}>
+          <Link key={item.id} to={links[index]} style={{color:'dodgerblue'}}>
+            {item}
           </Link>
+          </Typography>
         ))}
       </List>
     </Box>

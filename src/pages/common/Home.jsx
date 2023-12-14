@@ -1,20 +1,18 @@
 import { Button } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Typography from '@mui/material/Typography';
+import logo from '../../logo.png';
+import { useMediaQuery  } from '@mui/material'
 
 function Home() {
   sessionStorage.clear();
+  const isExtraSmallScreen = useMediaQuery('(max-width: 600px)');
+  const logoSize = isExtraSmallScreen ? '80vw' : '40vw';
   return (
     <div>
-      <Typography variant="h2" component="div" align="center" color="textPrimary" sx={{ marginBottom: 2 }}>
-        Talent Globe
-      </Typography>
-      <Typography variant="h5" component="div" align="center" color="textPrimary" sx={{ marginBottom: 6 }}>
-        Discover without Boundaries...
-      </Typography>
-      <Button variant="contained" sx={{ marginRight: 2 }}><Link to='/login' >Login</Link> </Button>
-      <Button variant="contained"><Link to='/signup'>Signup</Link> </Button>
+      <img src={logo} alt="Logo" style={{ width: logoSize}}/><br/><br/>
+      <Button variant="contained" sx={{ marginRight: 2,marginBottom: 2 }}><Link to='/login' >Login</Link> </Button>
+      <Button variant="contained" sx={{ marginRight: 2,marginBottom: 2 }}><Link to='/signup'>Signup</Link> </Button>
     </div>
     
   )
