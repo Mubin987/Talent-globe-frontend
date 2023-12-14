@@ -80,8 +80,6 @@ function HeaderC(props) {
       <Divider />
       <List>
         {navItems.map((item,index) => (
-          
-          
           <Typography variant="h6" sx={{ my: 2 }}>
           <Link key={item.id} to={links[index]} style={{color:'dodgerblue'}}>
             {item}
